@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   
+    <style>
+
+      .bg-black {
+        background-color: black;
+      }
+
+      .navbar-light {
+        color: white;
+      }
+
+      .account {
+        height: 10vh;
+        border-bottom: 1px solid gray;
+      }
+
+      .membership {
+        color: grey;
+        
+      }
+
+      .submit {
+        background-color: gray;
+        border: none;
+      }
+
+      .membershipbody{
+        height: 10vh;
+        color: black;
+        
+      }
+
+      #password {
+        color: gray;
+      }
+
+      .myprofile {
+        border-top: 1px solid grey;
+        
+      }
+
+      .changeplan {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+
+      }
+
+      .logo {
+        padding-top: 14px;
+        height: 25px;
+      }
+
+      .span {
+        color: gray;
+      }
+
+      #dropdown-menu {
+        background-color: black;
+      }
+
+      .text-align {
+        text-align: right;
+      }
+
+      .textdown {
+        text-align: bottom;
+        padding-top: 20px;
+      }
+
+      .textdown1 {
+        padding-top: 60px;
+      }
+
+    </style>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <a class="navbar-brand" href="#"><img src="netflix_logo.png" width="70"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tv Shows</a>
+            </li>
+            </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Movies</a>
+        </li>
+        </li>
+         </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My List</a>
+            </li>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            <!-- <a class="nav-link dropdown-toggle text-light" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              <img src="avatar.png" width="25">
+            </a> -->
+            <div class="btn-group dropdown">
+               <img class='logo' src="icon.png">
+              <!-- <button type="button" class="btn  dropdown-toggle text-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="span">KIDS</span> <img src="avatar.png" width="25">
+              </button> -->
+              <a class="text-light nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="span">KIDS</span> <img src="kids_icon.png" width="25">
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"> <img src="avatar.png" width="25" > Alexander</a>
+                <a class="dropdown-item" href="#">Manage Profiles</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Help Center</a>
+                <a class="dropdown-item" href="#">Sign out of Netflix</a>
+
+              </div>
+            </div>
+          </form>
+        </div>
+    </nav>
+    
+
+
+     <div class="container">
+       <div class="row justify-content-center">
+
+           <div class='account col-11 py-4'>
+             <h3>Account</h3>
+           </div>
+
+       </div>
+     </div>
+
+  
+
+     <div class="container">
+      <div class="row justify-content-center">
+
+          <div class='membership col-3 py-4'>
+            <!-- <h5>MEMBERSHIP & BILLING</h5> -->
+            <label class='d-inline-block' for="submit">MEMBERSHIP & BILLING</label><br>
+            <input type="button" id="submit" value="Cancel Membership">
+          </div>
+          <div class='membershipbody col-5 py-4'>
+            <!-- <h5>MEMBERSHIP & BILLING</h5> -->
+             <h6>student@strive.school</h6>
+             <h6 id='password'>Password: ********</h6>
+             <h6 id='password'>Phone: 321 044 1279</h6>
+          </div>
+          <div class='membershipbody col-3 py-4'>
+            <!-- <h5>MEMBERSHIP & BILLING</h5> -->
+             <h6 class='text-primary text-align'>Change account email</h6>
+             <h6 class='text-primary text-align' id='password'>Change password</h6>
+             <h6 class='text-primary text-align' id='password'>Change phone number</h6>
+          </div>
+
+       </div>
+     </div>
+     <div class="container">
+      <div class="row justify-content-center">
+
+        <div class='account1 col-8 py-4'>
+          <h6 class='text-primary'></h6>
+          <h6 class='text-primary'></h6>
+        </div>
+          <div class='account1 col-3 py-4'>
+            <h6 class='text-primary text-align'>Update billing info</h6>
+            <h6 class='text-primary text-align'>Billing details</h6>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class='account1 col-8 py-4'>
+          <h6 class='text-primary'></h6>
+          <h6 class='text-primary'></h6>
+        </div>
+          <div class='account1 col-3 py-4'>
+            <h6 class='text-primary text-align'>Redeem gift card or promo code</h6>
+            <h6 class='text-primary text-align'>Where to buy gifts</h6>
+          </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class='changeplan col-8 py-4'>
+          <h6 class='text-primary'></h6>
+          <h3 class='membership'>PLAN DETAILS</h3>
+        </div>
+          <div class='changeplan col-3 py-4'>
+            <h6 class='text-primary text-align'>Change plan</h6>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class=' col-3 py-4'>
+          <h6 class='text-primary'></h6>
+          <h3 class='membership'>SETTINGS</h3>
+        </div>
+          <div class='set col-5 py-4'>
+            <h6 class='text-primary'>Parental controls</h6>
+            <h6 class='text-primary'>Test participation</h6>
+            <h6 class='text-primary'>Manage download devices</h6>
+            <h6 class='text-primary'>Activate a device</h6>
+            <h6 class='text-primary'>Recent device streaming activity</h6>
+            <h6 class='text-primary'>Sign out of all devices</h6>
+          </div>
+          <div class=' col-3 py-4'>
+            <h6 class='text-primary'></h6>
+            <h3 class='membership'></h3>
+          </div>
+
+      </div>
+    </div>
+
+     <div class="container">
+      <div class="row justify-content-center">
+
+        <div class='myprofile col-3 py-4'>
+          <h6 class='text-primary'></h6>
+          <h3 class='membership'>MY PROFILE </h3>
+        </div>
+          <div class='myprofile col-4 py-4'>
+            <img src="kids_icon.png" width="35">
+            <h6 class='text-primary textdown'>Language</h6>
+            <h6 class='text-primary'>Playback settings</h6>
+            <h6 class='text-primary'>Subtitle apprecance</h6>
+            
+          </div>
+          <div class='myprofile col-2 py-4'>
+            <h6 class='text-primary textdown1'>Viewing activity</h6>
+            <h6 class='text-primary '>Ratings</h6>
+          </div>
+          <div class='myprofile col-2 py-4'>
+            <h6 class='text-primary text-align'>Manage profiles</h6>
+            <h6 class='text-primary text-align'>Add profile email</h6>
+          </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+    
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  </body>
+</html>

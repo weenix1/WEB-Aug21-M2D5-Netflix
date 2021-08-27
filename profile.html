@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=	, initial-scale=1.0" />
+    <title>profile</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+<style>
+
+body, html {
+    background: #141414;
+    color: #fff;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 1.2;
+    
+    font-size: 10px;
+    
+    user-select: none;
+    cursor: default;
+    min-height: 100vh;
+}
+html {
+    font-family: sans-serif;
+    
+    
+}
+
+
+
+.down-buttons .profile-button {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.profile-button.preferred-action {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    font-weight: 700;
+}
+.profile-button {
+    
+    margin: 2em 0 1em 0;
+  
+   border: 1px solid grey; 
+     color: grey; 
+    text-transform: uppercase;
+    padding: .5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.line{
+  background-color: rgb(48, 46, 46);
+ 
+ 
+}
+
+.container{
+  max-width: 400px;
+}
+
+section{
+  min-height: 100vh;
+  display: flex;
+}
+.container.main-container{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+input{
+  background-color:gray;
+}
+
+
+
+</style>
+
+
+
+  </head>
+
+
+
+
+  <body>
+    <img src="/img/cover_image.png" alt="" width="100px">
+    
+
+    <section >
+
+      <div class="container main-container" >
+        <h1>Edit Profile</h1>
+        <hr class="line"/>
+        <div class="row">
+          <div class="col-3">
+             <div class="strive-box">
+           
+               <img src="img/Capture.JPG" class="img-fluid" />
+               
+            </div >
+          </div>
+          <div class="profile-edit-parent col-6 ">
+            <div>
+            <input type="text" class="profile-name" id="profile-name-entry " aria-labelledby="profile-name-entry-label" placeholder="Name" value="Strive Student">
+            </div>
+            <div class="profile-entry-dropdown">
+              <div class="profileDropDown">
+                 <h2 class="profileDropDown-label mt-4" id="profileLanguageDropDown-header">Language:</h2>
+              
+             <select id="inputLanguage" class="form-control w-50" >
+              <option class="option" selected>Choose...</option>
+              <option>English</option>
+              <option>German</option>
+             </select>
+               </div>
+              </div>
+            </div>
+
+
+
+            
+          
+            <div class="container">
+              
+              <div class="row">
+                <div class="col-3"></div>
+                <div class="col-9">
+                  <hr class="line">
+                  <h2>Maturity Settings:</h2>
+                 <div>
+                  
+                   <li class="btn btn-dark " >ALL MATURITY RATINGS</li>
+                  
+                   <p>Show titles of <b>all maturity ratings</b> for this profile.</p>
+                 </div>
+                 <div>
+                   <a data-uia="profile-edit-button" class="btn btn-dark" href="#" aria-label="Edit maturity settings">Edit</a>
+                  </div>
+                 </div>
+                </div>
+           
+          </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9">
+               <hr class="line">
+               <h2 class="profile-entry-header">Autoplay controls</h2>
+               <div class="autoplay-option">
+                <input type="checkbox" id="nextEpisode-profile" checked="" class="btn btn-dark">
+                <span class="nextEpisode-marker" id="nextEpisode-marker">Autoplay next episode in a series on all devices.</span>
+               </div>
+               <div class="autoplay-option">
+                <input type="checkbox" id="videomerch-profile" checked="" class="btn btn-dark">
+                <span class="videomerch-marker" id="videomerch-marker">Autoplay previews while browsing on all devices.</span>
+               </div>
+            
+          </div>
+        </div>
+
+          
+          <hr class="line">  
+        <div class="down-buttons">
+          <button data-uia="profile-save-button" class="profile-button preferred-action">SAVE</button>
+          <button data-uia="profile-cancel-button" class="profile-button">CANCEL</button>
+          <button data-uia="profile-delete-button" class="profile-button">DELETE PROFILE</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
