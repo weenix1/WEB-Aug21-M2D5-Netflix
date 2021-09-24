@@ -59,34 +59,6 @@
           <li class="nav-item">
             <a class="nav-link" href="./backoffice.html">Backoffice</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
         </ul>
         <ul class="list-unstyled text-white">
           <li class="d-inline-block align-middle mr-3">
@@ -114,8 +86,8 @@
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Romance</a>
+                <a class="dropdown-item" href="#">Horror</a>
               </div>
             </div>
           </li>
@@ -160,9 +132,9 @@
             <span class="pr-3">Genres</span>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#carouselExample1">Horror</a>
+            <a class="dropdown-item" href="#carouselExample2">Romance</a>
+            <a class="dropdown-item" href="#carouselExample3">Action</a>
           </div>
         </div>
         <div class="heading-icons row no-gutters align-items-start ml-auto">
@@ -175,7 +147,7 @@
         </div>
       </div>
 
-      <h4 class="mt-5 font-bold">Because you watched New Girl</h4>
+      <h4 class="mt-5 font-bold">Horror Movies</h4>
 
       <div
         id="carouselExample1"
@@ -184,7 +156,7 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div id="new-girl" class="row mx-n1">
+            <div id="horror" class="row mx-n1">
               <div class="col-12 col-sm-6 col-md-3 col-lg-2 px-1">
                 <img
                   src="https://sosutenze.it/wp-content/uploads/2020/06/lucifer-5-netflix.png"
@@ -366,7 +338,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <h4 class="mt-5 font-bold">Trending now</h4>
+      <h4 class="mt-5 font-bold">Romantic Movies</h4>
 
       <div
         id="carouselExample2"
@@ -375,7 +347,7 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row mx-n1">
+            <div id="romance" class="row mx-n1">
               <div class="col-12 col-sm-6 col-md-3 col-lg-2 px-1">
                 <img
                   src="https://sosutenze.it/wp-content/uploads/2020/06/lucifer-5-netflix.png"
@@ -557,7 +529,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <h4 class="mt-5 font-bold">Watch it Again</h4>
+      <h4 class="mt-5 font-bold">Action Movies</h4>
 
       <div
         id="carouselExample3"
@@ -566,7 +538,7 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row mx-n1">
+            <div id="action" class="row mx-n1">
               <div class="col-12 col-sm-6 col-md-3 col-lg-2 px-1">
                 <img
                   src="https://sosutenze.it/wp-content/uploads/2020/06/lucifer-5-netflix.png"
@@ -1194,7 +1166,11 @@
     ></script>
 
     <script>
-      const getMovies = async (url) => {
+      const url = "https://striveschool-api.herokuapp.com/api/movies/horror";
+      const url1 = "https://striveschool-api.herokuapp.com/api/movies/romance";
+      const url2 = "https://striveschool-api.herokuapp.com/api/movies/action";
+
+      const getHorror = async (url) => {
         try {
           const response = await fetch(url, {
             headers: {
@@ -1219,21 +1195,72 @@
         }
       };
 
+      const getRomance = async (url1) => {
+        try {
+          const response = await fetch(url1, {
+            headers: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMWQwNjRiYjUzZDAwMTViMTllY2YiLCJpYXQiOjE2MzIzMTI1ODIsImV4cCI6MTYzMzUyMjE4Mn0.tSp1EnE2_Y3RGsIwKu7LMvWNTMZBAt-XyxQPWXlnb60",
+            },
+          });
+          console.log(response);
+
+          if (!response.ok) {
+            throw "Something went wrong with the fetch";
+          }
+
+          const body = await response.json();
+          console.log("BODY", body);
+
+          return body;
+        } catch (err) {
+          alert("WE HAVE AN ISSUE: " + err);
+        } finally {
+          console.log("FINALLY");
+        }
+      };
+
+      const getAction = async (url2) => {
+        try {
+          const response = await fetch(url1, {
+            headers: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMWQwNjRiYjUzZDAwMTViMTllY2YiLCJpYXQiOjE2MzIzMTI1ODIsImV4cCI6MTYzMzUyMjE4Mn0.tSp1EnE2_Y3RGsIwKu7LMvWNTMZBAt-XyxQPWXlnb60",
+            },
+          });
+          console.log(response);
+
+          if (!response.ok) {
+            throw "Something went wrong with the fetch";
+          }
+
+          const body = await response.json();
+          console.log("BODY", body);
+
+          return body;
+        } catch (err) {
+          alert("WE HAVE AN ISSUE: " + err);
+        } finally {
+          console.log("FINALLY");
+        }
+      };
+
       const displayMovies = (array, containerNode) => {
-        console.log("TEST NODE", containerNode);
+        console.log("CONTAINER NODE", containerNode);
 
         containerNode.innerHTML = "";
 
         if (array.length > 0) {
           array.forEach((event) => {
+            console.log(event);
             const div = document.createElement("div");
             div.classList.add("image-div");
             div.innerHTML = `<div class="col-12 col-sm-6 col-md-3 col-lg-2 px-1">
-                  <img
+                <a href="./backoffice.html?movieId=${event._id}"> <img
                     src="${event.imageUrl}"
                     class="img-fluid w-100"
                   />
-                  <a href="./backoffice.html?movieId=${event._id}">VIEW DETAILS</a>
+                  </a>
                 </div>`;
 
             containerNode.appendChild(div);
@@ -1243,15 +1270,17 @@
       };
 
       window.onload = async () => {
-        const url = "https://striveschool-api.herokuapp.com/api/movies";
-        const movieRow = document.querySelector("#new-girl");
-
+        const horrorRow = document.querySelector("#horror");
+        const romanceRow = document.querySelector("#romance");
+        const actionRow = document.querySelector("#action");
         try {
-          const movies = await getMovies(url);
+          const horrorMovie = await getHorror(url);
+          const romanceMovie = await getRomance(url1);
+          const actionMovie = await getAction(url2);
 
-          displayMovies(movies, movieRow);
-
-          // getData(url).then(events => displayEvents(events))
+          displayMovies(horrorMovie, horrorRow);
+          displayMovies(romanceMovie, romanceRow);
+          displayMovies(actionMovie, actionRow);
         } catch (err) {
           console.log(err);
         }

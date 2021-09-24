@@ -43,7 +43,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
-      <a class="navbar-brand" href="#">STRIVEFLIX</a>
+      <img src="./img/Netflix_Logo_RGB.png" width="120" />
       <button
         class="navbar-toggler"
         type="button"
@@ -113,13 +113,13 @@
             <div class="form-group">
               <label for="imageUrl">Image Url</label>
               <input
-                id="img"
+                id="imageUrl"
                 type="text"
                 class="form-control"
                 placeholder="Enter the movie imageUrl.."
                 onchange="document.getElementById('preview').src=this.value"
               />
-              <img id="preview" />
+              <img class="img-fluid w-100 h-100" id="preview" />
             </div>
             <span
               id="spinner"
@@ -191,10 +191,13 @@
           const response = await fetch(endpoint); // FETCHING SINGLE RESOURCE WITH EVENT ID
           const movieDetails = await response.json();
 
-          const { imageUrl } = movieDetails; // DESTRUCTURING THE RESPONSE OBJECT PROPERTIES
+          const { name, description, category, imageUrl } = movieDetails; // DESTRUCTURING THE RESPONSE OBJECT PROPERTIES
 
           //PREFILLING THE FORM INPUTS
-          document.getElementById("img").value = imageUrl;
+          document.getElementById("name").value = name;
+          document.getElementById("description").value = description;
+          document.getElementById("category").value = category;
+          document.getElementById("imageUrl").value = imageUrl;
 
           // DOM MANIPULATION
           document.querySelector(".subtitle").innerText = " — Edit Movies";
@@ -233,9 +236,9 @@
 } */
         const myMovie = {
           name: document.getElementById("name").value,
-          imageUrl: document.getElementById("img").value,
           description: document.getElementById("description").value,
           category: document.getElementById("category").value,
+          imageUrl: document.getElementById("imageUrl").value,
         };
 
         try {
@@ -257,7 +260,7 @@
               // Edit alert
               showAlert(
                 "success",
-                "Appointment with an id of " +
+                "Movie with an id of " +
                   respEvent._id +
                   " was EDITED successfully"
               );
